@@ -11,8 +11,7 @@ def ist_satzpalindrom(satz: str):
     return ist_palindrom(satz)
 
 def test(func, input: str):
-    print(f"{func.__name__}({input}) = {func(input)}")
-
+    print(f"{func.__name__}('{input}') = {func(input)}")
 
 if __name__ == "__main__":
     test(ist_palindrom, "otto")
