@@ -24,7 +24,7 @@ class Wetterstation:
         """Holt sich eine Aufzeichnung vom Sensor"""
 
         reading = self._sensor.get_reading()
-        if len(self._readings):
+        if len(self._readings) >= 10:
             self._readings.pop(0)
         self._readings.append(reading)
 
