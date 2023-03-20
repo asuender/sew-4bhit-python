@@ -24,14 +24,14 @@ class Komplex:
         return sqrt(self.real**2 + self.im**2)
     
     def arg(self):
-        return f"{self.real} + {self.im}i"
+        return atan2(self.real, self.im)
     
     def __str__(self):
         return f"{self.real} + {self.im}i"
 
 if __name__ == "__main__":
-    a = Komplex(1, 2)
-    b = Komplex(3, 4)
+    a = Komplex(2, 3)
+    b = Komplex(4, 5)
 
     print("a =", a, "; b =", b)
 
