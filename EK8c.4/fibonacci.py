@@ -1,14 +1,26 @@
 def fib_recursive(n):
-    # TODO return a single fibonacci number
-    pass
+    if n == 1 or n == 2:
+        return 1
+    
+    return fib_recursive(n - 1) + fib_recursive(n - 2)
 
 def fib_iterative(n):
-    # TODO return a single fibonacci number
-    pass
+    result = [1, 1]
+    for i in range(2, n):
+        result.append(result[i - 1] + result[i - 2])
+
+    return result[-1]
 
 def fib_generator():
-    # TODO generate all finonacci numbers
-    pass
+    yield 1
+    yield 1
+
+    values = [1, 1]
+
+    while True:
+        next_value = values[-1] + values[-2]
+        values.append(next_value)
+        yield next_value
 
 if __name__ == '__main__':
     def run_recursive(start, end):
